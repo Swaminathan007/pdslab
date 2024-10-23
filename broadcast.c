@@ -17,6 +17,7 @@ int main(int argc,char **argv){
         printf("Process 0 broadcasting...\n");
     }
     MPI_Bcast(&num,1,MPI_INT,0,MPI_COMM_WORLD);
+    
     if(rank!=0){
         printf("Process %d has num = %d\n",rank,num);
 
